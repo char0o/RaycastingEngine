@@ -13,6 +13,8 @@ namespace Raycaster
         private static Vector2f Size = new Vector2f(16, 16);
         private Vector2f position;
         Sprite Sprite { get; set; }
+        Vector2f Velocity { get; set; }
+        public Vector2i MousePrevious { get; set; }
         public Vector2f Position
         {
             get { return position; }
@@ -30,8 +32,8 @@ namespace Raycaster
             get { return this.angle; }
             set
             {
-                if (value > (MathF.PI * 2f) || value < 0)
-                    throw new ArgumentOutOfRangeException();
+                /*if (value > (MathF.PI * 2f) || value < 0)
+                    throw new ArgumentOutOfRangeException();*/
                 if (this.Sprite != null)
                     this.Sprite.Rotation = Rays.RadToDeg(value - MathF.PI / 2);
                 this.angle = value;
@@ -44,6 +46,7 @@ namespace Raycaster
             this.Sprite = new Sprite(new Texture("resources/player.png"));
             this.Sprite.Origin = new Vector2f(Player.Size.X / 2, Player.Size.Y / 2);
             this.Position = position;
+            this.MousePrevious = new Vector2i(Program.SCREEN_WIDTH / 2, Program.SCREEN_HEIGHT / 2);
             this.Angle = 0;
         }
         public void Draw(RenderWindow window)

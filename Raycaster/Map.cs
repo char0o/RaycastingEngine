@@ -1,5 +1,6 @@
 ﻿using SFML.System;
 using SFML.Graphics;
+
 namespace Raycaster
 {
     public class Map
@@ -37,9 +38,23 @@ namespace Raycaster
         }
         public void DrawTiles(RenderWindow window)
         {
+
             foreach (Tile tile in Tiles)
             {
                 window.Draw(tile.Shape);
+            }
+            for (int i = 0; i < 8; i++)
+            {
+                Vertex[] line = {
+                    new Vertex(new Vector2f(0, i * 32), new Color(64, 64, 64, 255)),
+                    new Vertex(new Vector2f(256, i * 32), new Color(64, 64, 64, 255))
+                };
+                Vertex[] column = {
+                    new Vertex(new Vector2f(i * 32f, 0), new Color(64, 64, 64, 255)),
+                    new Vertex(new Vector2f(i * 32f, 256), new Color(64, 64, 64, 255))
+                };
+                window.Draw(line, PrimitiveType.Lines);
+                window.Draw(column, PrimitiveType.Lines);
             }
         }
     }
