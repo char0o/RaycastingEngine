@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raycaster", "Raycaster\Raycaster.csproj", "{C4FC4E46-6F96-48C6-819F-DC1026E0C190}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Raycaster", "Raycaster\Raycaster.csproj", "{C4FC4E46-6F96-48C6-819F-DC1026E0C190}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{40D55C37-14E4-4130-8CB6-BEBAAA38FE9D}"
 	ProjectSection(SolutionItems) = preProject
+		Raycaster\bin\Debug\net6.0\resources\arial.ttf = Raycaster\bin\Debug\net6.0\resources\arial.ttf
+		Raycaster\bin\Debug\net6.0\resources\brick.png = Raycaster\bin\Debug\net6.0\resources\brick.png
+		Raycaster\bin\Debug\net6.0\resources\brickwall2.png = Raycaster\bin\Debug\net6.0\resources\brickwall2.png
+		Raycaster\bin\Debug\net6.0\resources\hl22.png = Raycaster\bin\Debug\net6.0\resources\hl22.png
 		Raycaster\bin\Debug\net6.0\resources\player.png = Raycaster\bin\Debug\net6.0\resources\player.png
+		Raycaster\bin\Debug\net6.0\resources\window.png = Raycaster\bin\Debug\net6.0\resources\window.png
 	EndProjectSection
 EndProject
 Global
